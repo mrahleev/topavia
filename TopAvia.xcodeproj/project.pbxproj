@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		960F580E9AB68CCAAD495A74 /* Pods_TopAvia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A34DC9009A4408850384C1A /* Pods_TopAvia.framework */; };
+		BD2E014A9337106C06FAF315 /* Pods_TopAvia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B688B39D3771A2E2AF3FAA1 /* Pods_TopAvia.framework */; };
 		D4ABFBFD22D49B9D0069C7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ABFBFC22D49B9D0069C7AA /* AppDelegate.swift */; };
 		D4ABFBFF22D49B9D0069C7AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ABFBFE22D49B9D0069C7AA /* ViewController.swift */; };
 		D4ABFC0122D49B9E0069C7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4ABFC0022D49B9E0069C7AA /* Assets.xcassets */; };
 		D4ABFC0422D49B9E0069C7AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4ABFC0222D49B9E0069C7AA /* Main.storyboard */; };
+		D4F6E74022D67A1400AF7E83 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6E73F22D67A1400AF7E83 /* NetworkManager.swift */; };
+		D4FA8A9D22D67DEB00B5E897 /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA8A9C22D67DEB00B5E897 /* URL+Utils.swift */; };
+		D4FA8AA022D690E300B5E897 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA8A9F22D690E300B5E897 /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A34DC9009A4408850384C1A /* Pods_TopAvia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopAvia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		846FDD57DA20432E426AB7E9 /* Pods-TopAvia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopAvia.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopAvia/Pods-TopAvia.release.xcconfig"; sourceTree = "<group>"; };
-		BCF06DB6EFB32360140340C4 /* Pods-TopAvia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopAvia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopAvia/Pods-TopAvia.debug.xcconfig"; sourceTree = "<group>"; };
+		6876441FBDD11A5494DFD4D0 /* Pods-TopAvia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopAvia.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopAvia/Pods-TopAvia.release.xcconfig"; sourceTree = "<group>"; };
+		6B688B39D3771A2E2AF3FAA1 /* Pods_TopAvia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopAvia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1844D1A98764DC5D53065C5 /* Pods-TopAvia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopAvia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopAvia/Pods-TopAvia.debug.xcconfig"; sourceTree = "<group>"; };
 		D4ABFBF922D49B9D0069C7AA /* TopAvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopAvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4ABFBFC22D49B9D0069C7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4ABFBFE22D49B9D0069C7AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +28,9 @@
 		D4ABFC0322D49B9E0069C7AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4ABFC0522D49B9E0069C7AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4ABFC0622D49B9E0069C7AA /* TopAvia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TopAvia.entitlements; sourceTree = "<group>"; };
+		D4F6E73F22D67A1400AF7E83 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D4FA8A9C22D67DEB00B5E897 /* URL+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utils.swift"; sourceTree = "<group>"; };
+		D4FA8A9F22D690E300B5E897 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,19 +38,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				960F580E9AB68CCAAD495A74 /* Pods_TopAvia.framework in Frameworks */,
+				BD2E014A9337106C06FAF315 /* Pods_TopAvia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1AD1AB9A28F464A6FC99CD29 /* Frameworks */ = {
+		1F0B4D18392EB5F744F4EF0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4A34DC9009A4408850384C1A /* Pods_TopAvia.framework */,
+				6B688B39D3771A2E2AF3FAA1 /* Pods_TopAvia.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AD92F2D6B5C2E9E4583E206 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1844D1A98764DC5D53065C5 /* Pods-TopAvia.debug.xcconfig */,
+				6876441FBDD11A5494DFD4D0 /* Pods-TopAvia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4675C2322D65FFF0007CB6E /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				D4ABFC0022D49B9E0069C7AA /* Assets.xcassets */,
+				D4ABFC0522D49B9E0069C7AA /* Info.plist */,
+				D4ABFC0622D49B9E0069C7AA /* TopAvia.entitlements */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 		D4ABFBF022D49B9D0069C7AA = {
@@ -52,8 +77,8 @@
 			children = (
 				D4ABFBFB22D49B9D0069C7AA /* TopAvia */,
 				D4ABFBFA22D49B9D0069C7AA /* Products */,
-				F98E05475C5FF787C407434F /* Pods */,
-				1AD1AB9A28F464A6FC99CD29 /* Frameworks */,
+				3AD92F2D6B5C2E9E4583E206 /* Pods */,
+				1F0B4D18392EB5F744F4EF0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,21 +95,13 @@
 			children = (
 				D4ABFBFC22D49B9D0069C7AA /* AppDelegate.swift */,
 				D4ABFBFE22D49B9D0069C7AA /* ViewController.swift */,
-				D4ABFC0022D49B9E0069C7AA /* Assets.xcassets */,
+				D4F6E73F22D67A1400AF7E83 /* NetworkManager.swift */,
+				D4FA8A9F22D690E300B5E897 /* Currency.swift */,
+				D4FA8A9C22D67DEB00B5E897 /* URL+Utils.swift */,
 				D4ABFC0222D49B9E0069C7AA /* Main.storyboard */,
-				D4ABFC0522D49B9E0069C7AA /* Info.plist */,
-				D4ABFC0622D49B9E0069C7AA /* TopAvia.entitlements */,
+				D4675C2322D65FFF0007CB6E /* Supporting files */,
 			);
 			path = TopAvia;
-			sourceTree = "<group>";
-		};
-		F98E05475C5FF787C407434F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BCF06DB6EFB32360140340C4 /* Pods-TopAvia.debug.xcconfig */,
-				846FDD57DA20432E426AB7E9 /* Pods-TopAvia.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,7 +111,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4ABFC0922D49B9E0069C7AA /* Build configuration list for PBXNativeTarget "TopAvia" */;
 			buildPhases = (
-				AAEADD2E2E513FC92C7F790C /* [CP] Check Pods Manifest.lock */,
+				6D0B7588B440810DD0F0F668 /* [CP] Check Pods Manifest.lock */,
 				D4ABFBF522D49B9D0069C7AA /* Sources */,
 				D4ABFBF622D49B9D0069C7AA /* Frameworks */,
 				D4ABFBF722D49B9D0069C7AA /* Resources */,
@@ -154,7 +171,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AAEADD2E2E513FC92C7F790C /* [CP] Check Pods Manifest.lock */ = {
+		6D0B7588B440810DD0F0F668 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -183,6 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F6E74022D67A1400AF7E83 /* NetworkManager.swift in Sources */,
+				D4FA8AA022D690E300B5E897 /* Currency.swift in Sources */,
+				D4FA8A9D22D67DEB00B5E897 /* URL+Utils.swift in Sources */,
 				D4ABFBFF22D49B9D0069C7AA /* ViewController.swift in Sources */,
 				D4ABFBFD22D49B9D0069C7AA /* AppDelegate.swift in Sources */,
 			);
@@ -319,40 +339,44 @@
 		};
 		D4ABFC0A22D49B9E0069C7AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCF06DB6EFB32360140340C4 /* Pods-TopAvia.debug.xcconfig */;
+			baseConfigurationReference = A1844D1A98764DC5D53065C5 /* Pods-TopAvia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TopAvia/TopAvia.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "TopAvia/Supporting files/TopAvia.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = KM97TVLHSC;
-				INFOPLIST_FILE = TopAvia/Info.plist;
+				INFOPLIST_FILE = "TopAvia/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mr.stringTest.TopAvia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		D4ABFC0B22D49B9E0069C7AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 846FDD57DA20432E426AB7E9 /* Pods-TopAvia.release.xcconfig */;
+			baseConfigurationReference = 6876441FBDD11A5494DFD4D0 /* Pods-TopAvia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TopAvia/TopAvia.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "TopAvia/Supporting files/TopAvia.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KM97TVLHSC;
-				INFOPLIST_FILE = TopAvia/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "TopAvia/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mr.stringTest.TopAvia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
