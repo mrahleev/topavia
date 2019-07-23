@@ -11,4 +11,9 @@ import Foundation
 struct Currency: Decodable {
     let code: String
     let name: String
+    
+    enum CodingKeys: String, CodingKey {
+        case code = "Code"
+        case name = "Name"
+    }
 }

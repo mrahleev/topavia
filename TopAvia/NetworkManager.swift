@@ -13,13 +13,16 @@ public typealias NMResult<T> = Result<T, Error>
 class NetworkManager<T: Decodable> {
     private let baseURL = "http://online.toptour.by:9000/TourSearchOwin/"
 
-    func load(path: String, params: [String: String] = [:], completion: @escaping (NMResult<T>) -> Void) {
-
+    func load(path: String, pathParams: [String] = [], queryParams: [String: String] = [:], completion: @escaping (NMResult<T>) -> Void) {
         guard var url = URL(string: baseURL) else { return }
         url.appendPathComponent(path)
-        url.appendQueryParams(params)
+        pathParams.forEach { pathParam in
+            url.appendPathComponent(pathParam)
+        }
+        url.appendQueryParams(queryParams)
 
-        URLSession.shared.dataTask(with: URL(string: "https://www.apple.com")!) { (data, response, error) in
+        // URL(string: "https://www.apple.com")!
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 completion(.failure(error))
             } else if let data = data {
@@ -32,5 +35,4 @@ class NetworkManager<T: Decodable> {
             }
         }.resume()
     }
-
 }
