@@ -9,11 +9,11 @@
 import Foundation
 
 struct City: Decodable {
-    let key: Int
     let name: String
-    
+    let key: Int
+
     enum CodingKeys: String, CodingKey {
-        case key = "Key"
         case name = "Name"
+        case key = "Key"
     }
 }

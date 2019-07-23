@@ -17,9 +17,13 @@
 		D4ABFBFF22D49B9D0069C7AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ABFBFE22D49B9D0069C7AA /* ViewController.swift */; };
 		D4ABFC0122D49B9E0069C7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4ABFC0022D49B9E0069C7AA /* Assets.xcassets */; };
 		D4ABFC0422D49B9E0069C7AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4ABFC0222D49B9E0069C7AA /* Main.storyboard */; };
+		D4F4A9DA22E73BD200D406FA /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4A9D922E73BD200D406FA /* FetchService.swift */; };
+		D4F4A9DC22E7740700D406FA /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4A9DB22E7740700D406FA /* APIRouter.swift */; };
+		D4F4A9E022E776F000D406FA /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4A9DF22E776F000D406FA /* DateFormatter.swift */; };
+		D4F4A9E222E7790100D406FA /* URLConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4A9E122E7790100D406FA /* URLConvertible.swift */; };
+		D4F4A9E422E7919D00D406FA /* JSONResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4A9E322E7919D00D406FA /* JSONResponseDecoder.swift */; };
 		D4F6E74022D67A1400AF7E83 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6E73F22D67A1400AF7E83 /* NetworkManager.swift */; };
 		D4FA8A9D22D67DEB00B5E897 /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA8A9C22D67DEB00B5E897 /* URL+Utils.swift */; };
-		D4FA8AA022D690E300B5E897 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA8A9F22D690E300B5E897 /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +42,13 @@
 		D4ABFC0322D49B9E0069C7AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4ABFC0522D49B9E0069C7AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4ABFC0622D49B9E0069C7AA /* TopAvia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TopAvia.entitlements; sourceTree = "<group>"; };
+		D4F4A9D922E73BD200D406FA /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
+		D4F4A9DB22E7740700D406FA /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		D4F4A9DF22E776F000D406FA /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		D4F4A9E122E7790100D406FA /* URLConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConvertible.swift; sourceTree = "<group>"; };
+		D4F4A9E322E7919D00D406FA /* JSONResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResponseDecoder.swift; sourceTree = "<group>"; };
 		D4F6E73F22D67A1400AF7E83 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D4FA8A9C22D67DEB00B5E897 /* URL+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utils.swift"; sourceTree = "<group>"; };
-		D4FA8A9F22D690E300B5E897 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +85,6 @@
 			children = (
 				4B04F13522E5B5B7000B09BD /* City.swift */,
 				4B04F13722E5D7A9000B09BD /* Country.swift */,
-				D4FA8A9F22D690E300B5E897 /* Currency.swift */,
 				4B0E673522E1C50500F67960 /* Flight.swift */,
 			);
 			path = Models;
@@ -124,15 +131,52 @@
 			isa = PBXGroup;
 			children = (
 				D4ABFBFC22D49B9D0069C7AA /* AppDelegate.swift */,
-				D4ABFBFE22D49B9D0069C7AA /* ViewController.swift */,
-				D4F6E73F22D67A1400AF7E83 /* NetworkManager.swift */,
-				4B0B4D9522E343910057EB9A /* Models */,
 				4B0B4D9622E343A30057EB9A /* Extensions */,
-				D4ABFC0222D49B9E0069C7AA /* Main.storyboard */,
+				4B0B4D9522E343910057EB9A /* Models */,
+				D4F4A9D622E73B9C00D406FA /* Networking */,
+				D4F4A9D822E73BB300D406FA /* Services */,
+				D4F4A9D722E73BA800D406FA /* ViewControllers */,
+				D4F4A9D522E73B8400D406FA /* Resources */,
 				D4675C2322D65FFF0007CB6E /* Supporting files */,
-				4B0B4DA022E348BA0057EB9A /* TextConstants.swift */,
 			);
 			path = TopAvia;
+			sourceTree = "<group>";
+		};
+		D4F4A9D522E73B8400D406FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4ABFC0222D49B9E0069C7AA /* Main.storyboard */,
+				4B0B4DA022E348BA0057EB9A /* TextConstants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D4F4A9D622E73B9C00D406FA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D4F6E73F22D67A1400AF7E83 /* NetworkManager.swift */,
+				D4F4A9DB22E7740700D406FA /* APIRouter.swift */,
+				D4F4A9E122E7790100D406FA /* URLConvertible.swift */,
+				D4F4A9E322E7919D00D406FA /* JSONResponseDecoder.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D4F4A9D722E73BA800D406FA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4ABFBFE22D49B9D0069C7AA /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D4F4A9D822E73BB300D406FA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D4F4A9D922E73BD200D406FA /* FetchService.swift */,
+				D4F4A9DF22E776F000D406FA /* DateFormatter.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,11 +283,15 @@
 				D4F6E74022D67A1400AF7E83 /* NetworkManager.swift in Sources */,
 				4B04F13822E5D7A9000B09BD /* Country.swift in Sources */,
 				4B04F13622E5B5B7000B09BD /* City.swift in Sources */,
-				D4FA8AA022D690E300B5E897 /* Currency.swift in Sources */,
 				D4FA8A9D22D67DEB00B5E897 /* URL+Utils.swift in Sources */,
 				4B0E673622E1C50500F67960 /* Flight.swift in Sources */,
+				D4F4A9E222E7790100D406FA /* URLConvertible.swift in Sources */,
 				4B0B4DA122E348BA0057EB9A /* TextConstants.swift in Sources */,
+				D4F4A9E422E7919D00D406FA /* JSONResponseDecoder.swift in Sources */,
+				D4F4A9DA22E73BD200D406FA /* FetchService.swift in Sources */,
+				D4F4A9DC22E7740700D406FA /* APIRouter.swift in Sources */,
 				4B04F13A22E5F6F6000B09BD /* Int+Utils.swift in Sources */,
+				D4F4A9E022E776F000D406FA /* DateFormatter.swift in Sources */,
 				D4ABFBFF22D49B9D0069C7AA /* ViewController.swift in Sources */,
 				D4ABFBFD22D49B9D0069C7AA /* AppDelegate.swift in Sources */,
 			);

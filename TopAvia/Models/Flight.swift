@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Flight: Decodable {
-    let aId: Int
-    let bId: Int
-    let abDate: Date
-    let baDate: Date
+class Flight: Decodable {
+    var aId: Int?
+    var bId: Int?
+    var abDate: Date?
+    var baDate: Date?
 }
