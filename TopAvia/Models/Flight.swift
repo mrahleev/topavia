@@ -63,6 +63,11 @@ struct Flight: Decodable {
     let cost: Int
     let services: [Service]
     
+    var hasPlaces: Bool {
+        // TODO: Fix for both services
+        return services.contains { $0.detail.contains { $0.quotaStatus.placesStatus.hasPlaces } }
+    }
+    
     enum CodingKeys: String, CodingKey {
         case key = "Key"
         case name = "Name"
@@ -72,8 +77,8 @@ struct Flight: Decodable {
     
     var description: String {
         let sortedServices = services.sorted { $0.beginDateTime < $1.beginDateTime }
-        let hasABPlaces = sortedServices.safe(at: 0)?.detail.first?.quotaStatus.placesStatus.hasPlaces ?? false
-        let hasBAPlaces = sortedServices.safe(at: 1)?.detail.first?.quotaStatus.placesStatus.hasPlaces ?? false
+        let hasABPlaces = sortedServices.safe(at: 0)?.detail.contains { $0.quotaStatus.placesStatus.hasPlaces } ?? false
+        let hasBAPlaces = sortedServices.safe(at: 1)?.detail.contains { $0.quotaStatus.placesStatus.hasPlaces } ?? false
 
         return "\(name) \(cost)$, abPlaces? \(hasABPlaces), baPlaces? \(hasBAPlaces)"
     }

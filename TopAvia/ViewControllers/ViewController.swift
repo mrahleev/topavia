@@ -90,9 +90,8 @@ class ViewController: NSViewController {
             sema.wait()
         }
         
-        var flights = flightsResults.flatMap { $0.flights }
-        flights.sort { $0.cost < $1.cost }
-        
+        let flightsWithPlaces = flightsResults.flatMap { $0.flights }.filter { $0.hasPlaces }
+        let cheapestFlights = flightsWithPlaces.sorted { $0.cost < $1.cost }
         print("")
     }
 }
