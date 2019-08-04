@@ -14,6 +14,7 @@ protocol FetchServiceProtocol {
     func getArrivalCities(departureCityId: Int, arrivalCountryId: Int, completion: @escaping Completion<[City]>)
     func getDatesAtoB(aId: Int, bId: Int, completion: @escaping Completion<[Date]>)
     func getDatesBtoA(aId: Int, bId: Int, abDate: Date, completion: @escaping Completion<[Date]>)
+    func getFlight(aId: Int, bId: Int, abDate: Date, baDate: Date, completion: @escaping Completion<FlightResult>)
 }
 
 class FetchService: FetchServiceProtocol {
@@ -42,5 +43,10 @@ class FetchService: FetchServiceProtocol {
     func getDatesBtoA(aId: Int, bId: Int, abDate: Date, completion: @escaping Completion<[Date]>) {
         let request = APIRouter.getDatesBtoA(aCityId: aId, bCityId: bId, abDate: abDate)
         networkManager.get(request: request, dateFormat: "dd.MM.yyyy", completion: completion)
+    }
+        
+    func getFlight(aId: Int, bId: Int, abDate: Date, baDate: Date, completion: @escaping Completion<FlightResult>) {
+        let request = APIRouter.getFlight(aId: aId, bId: bId, abDate: abDate, baDate: baDate, adultsCount: 2)
+        networkManager.get(request: request, dateFormat: "yyyy-MM-dd'T'HH:mm:ss", completion: completion)
     }
 }

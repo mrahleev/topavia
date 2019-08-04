@@ -10,64 +10,89 @@ import Cocoa
 
 class ViewController: NSViewController {
     private let fetchService: FetchServiceProtocol = FetchService()
-
-    private var aCities = [City]()
-    private var bCoutries = [Country]()
-    private var bCities = [City]()
-    private var abDates = [Date]()
-    private var baDates = [Date]()
-    private var flights = [Flight]()
-
+    
     private let sema = DispatchSemaphore(value: 0)
-
+    
     // MARK: -
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         DispatchQueue.global().async {
-            self.test()
+            // self.test()
+            self.getCitiesGraph()
         }
     }
-
+    
     // MARK: - Helpers
-
-    private func test() {
+    
+    private func getCitiesGraph() {
+        var citiesA = [CityA]()
+        
         fetchService.getDepartureCities { (result) in
-            print(result)
-            self.aCities = try! result.get()
+            let cities = try! result.get()
+            cities.forEach { citiesA.append(.init(city: $0)) }
             self.sema.signal()
         }
         sema.wait()
-
-        fetchService.getArrivalCountries(departureCityId: aCities[0].key) { (result) in
-            print(result)
-            self.bCoutries = try! result.get()
-            self.sema.signal()
+        
+        var countriesB = [CountryB]()
+        citiesA.forEach { (cityA) in
+            fetchService.getArrivalCountries(departureCityId: cityA.city.key) { (result) in
+                let countries = try! result.get()
+                countries.forEach { countriesB.append(.init(cityA: cityA, country: $0)) }
+                self.sema.signal()
+            }
+            sema.wait()
         }
-        sema.wait()
-
-        fetchService.getArrivalCities(departureCityId: aCities[0].key, arrivalCountryId: bCoutries[0].key) { (result) in
-            print(result)
-            self.bCities = try! result.get()
-            self.sema.signal()
+        
+        var citiesB = [CityB]()
+        countriesB.forEach { (countryB) in
+            fetchService.getArrivalCities(departureCityId: countryB.cityA.city.key, arrivalCountryId: countryB.country.key) { (result) in
+                let cities = try! result.get()
+                cities.forEach { citiesB.append(.init(countryB: countryB, city: $0)) }
+                self.sema.signal()
+            }
+            sema.wait()
         }
-        sema.wait()
-
-        fetchService.getDatesAtoB(aId: aCities[0].key, bId: bCities[0].key) { (result) in
-            print(result)
-            self.abDates = try! result.get()
-            self.sema.signal()
+        
+        var datesAB = [DateAB]()
+        citiesB.forEach { (cityB) in
+            fetchService.getDatesAtoB(aId: cityB.countryB.cityA.city.key, bId: cityB.city.key) { (result) in
+                let dates = try! result.get()
+                dates.forEach { datesAB.append(.init(cityB: cityB, date: $0)) }
+                self.sema.signal()
+            }
+            sema.wait()
         }
-        sema.wait()
-
-        fetchService.getDatesBtoA(aId: aCities[0].key, bId: bCities[0].key, abDate: abDates[0]) { (result) in
-            print(result)
-            self.baDates = try! result.get()
-            self.sema.signal()
+        
+        var datesBA = [DateBA]()
+        datesAB.forEach { (dateAB) in
+            fetchService.getDatesBtoA(aId: dateAB.cityB.countryB.cityA.city.key, bId: dateAB.cityB.city.key, abDate: dateAB.date) { (result) in
+                let dates = try! result.get()
+                dates.forEach { datesBA.append(.init(dateAB: dateAB, date: $0)) }
+                self.sema.signal()
+            }
+            sema.wait()
         }
-        sema.wait()
-
-        print("FINISH URA")
+        
+        var flightsResults = [FlightResult]()
+        datesBA.forEach { (dateBA) in
+            fetchService.getFlight(
+                aId: dateBA.dateAB.cityB.countryB.cityA.city.key,
+                bId: dateBA.dateAB.cityB.city.key,
+                abDate: dateBA.dateAB.date,
+                baDate: dateBA.date) { (result) in
+                    let flightResults = try! result.get()
+                    flightsResults.append(flightResults)
+                    self.sema.signal()
+            }
+            sema.wait()
+        }
+        
+        var flights = flightsResults.flatMap { $0.flights }
+        flights.sort { $0.cost < $1.cost }
+        
+        print("")
     }
 }

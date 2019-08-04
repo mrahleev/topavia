@@ -13,6 +13,8 @@
 		4B0B4DA122E348BA0057EB9A /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B4DA022E348BA0057EB9A /* TextConstants.swift */; };
 		4B0E673622E1C50500F67960 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E673522E1C50500F67960 /* Flight.swift */; };
 		BD2E014A9337106C06FAF315 /* Pods_TopAvia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B688B39D3771A2E2AF3FAA1 /* Pods_TopAvia.framework */; };
+		D4839F5C22F4D06100E6FE6F /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4839F5B22F4D06100E6FE6F /* Date+Utils.swift */; };
+		D4839F5E22F4D34100E6FE6F /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4839F5D22F4D34100E6FE6F /* Array+Utils.swift */; };
 		D4ABFBFD22D49B9D0069C7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ABFBFC22D49B9D0069C7AA /* AppDelegate.swift */; };
 		D4ABFBFF22D49B9D0069C7AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ABFBFE22D49B9D0069C7AA /* ViewController.swift */; };
 		D4ABFC0122D49B9E0069C7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4ABFC0022D49B9E0069C7AA /* Assets.xcassets */; };
@@ -22,6 +24,7 @@
 		D4F4A9E022E776F000D406FA /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4A9DF22E776F000D406FA /* DateFormatter.swift */; };
 		D4F4A9E222E7790100D406FA /* URLConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4A9E122E7790100D406FA /* URLConvertible.swift */; };
 		D4F4A9E422E7919D00D406FA /* JSONResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4A9E322E7919D00D406FA /* JSONResponseDecoder.swift */; };
+		D4F4A9E622E7A3E000D406FA /* FlightMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4A9E522E7A3E000D406FA /* FlightMap.swift */; };
 		D4F6E74022D67A1400AF7E83 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6E73F22D67A1400AF7E83 /* NetworkManager.swift */; };
 		D4FA8A9D22D67DEB00B5E897 /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA8A9C22D67DEB00B5E897 /* URL+Utils.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +38,8 @@
 		6876441FBDD11A5494DFD4D0 /* Pods-TopAvia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopAvia.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopAvia/Pods-TopAvia.release.xcconfig"; sourceTree = "<group>"; };
 		6B688B39D3771A2E2AF3FAA1 /* Pods_TopAvia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopAvia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1844D1A98764DC5D53065C5 /* Pods-TopAvia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopAvia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopAvia/Pods-TopAvia.debug.xcconfig"; sourceTree = "<group>"; };
+		D4839F5B22F4D06100E6FE6F /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		D4839F5D22F4D34100E6FE6F /* Array+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
 		D4ABFBF922D49B9D0069C7AA /* TopAvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopAvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4ABFBFC22D49B9D0069C7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4ABFBFE22D49B9D0069C7AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		D4F4A9DF22E776F000D406FA /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		D4F4A9E122E7790100D406FA /* URLConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConvertible.swift; sourceTree = "<group>"; };
 		D4F4A9E322E7919D00D406FA /* JSONResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResponseDecoder.swift; sourceTree = "<group>"; };
+		D4F4A9E522E7A3E000D406FA /* FlightMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightMap.swift; sourceTree = "<group>"; };
 		D4F6E73F22D67A1400AF7E83 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D4FA8A9C22D67DEB00B5E897 /* URL+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +92,7 @@
 				4B04F13522E5B5B7000B09BD /* City.swift */,
 				4B04F13722E5D7A9000B09BD /* Country.swift */,
 				4B0E673522E1C50500F67960 /* Flight.swift */,
+				D4F4A9E522E7A3E000D406FA /* FlightMap.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,6 +102,8 @@
 			children = (
 				D4FA8A9C22D67DEB00B5E897 /* URL+Utils.swift */,
 				4B04F13922E5F6F6000B09BD /* Int+Utils.swift */,
+				D4839F5B22F4D06100E6FE6F /* Date+Utils.swift */,
+				D4839F5D22F4D34100E6FE6F /* Array+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -285,8 +294,11 @@
 				4B04F13622E5B5B7000B09BD /* City.swift in Sources */,
 				D4FA8A9D22D67DEB00B5E897 /* URL+Utils.swift in Sources */,
 				4B0E673622E1C50500F67960 /* Flight.swift in Sources */,
+				D4839F5C22F4D06100E6FE6F /* Date+Utils.swift in Sources */,
 				D4F4A9E222E7790100D406FA /* URLConvertible.swift in Sources */,
+				D4839F5E22F4D34100E6FE6F /* Array+Utils.swift in Sources */,
 				4B0B4DA122E348BA0057EB9A /* TextConstants.swift in Sources */,
+				D4F4A9E622E7A3E000D406FA /* FlightMap.swift in Sources */,
 				D4F4A9E422E7919D00D406FA /* JSONResponseDecoder.swift in Sources */,
 				D4F4A9DA22E73BD200D406FA /* FetchService.swift in Sources */,
 				D4F4A9DC22E7740700D406FA /* APIRouter.swift in Sources */,

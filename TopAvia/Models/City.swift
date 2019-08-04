@@ -14,6 +14,24 @@ struct City: Decodable {
 
     enum CodingKeys: String, CodingKey {
         case name = "Name"
+        case value = "Value"
         case key = "Key"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        key = try values.decode(Int.self, forKey: .key)
+        do {
+            name = try values.decode(String.self, forKey: .name)
+        } catch {
+            name = try values.decode(String.self, forKey: .value)
+        }
+    }
+}
+
+extension City: Hashable {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(key)
     }
 }
