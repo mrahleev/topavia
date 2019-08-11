@@ -10,7 +10,6 @@
 		4B04F13622E5B5B7000B09BD /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04F13522E5B5B7000B09BD /* City.swift */; };
 		4B04F13822E5D7A9000B09BD /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04F13722E5D7A9000B09BD /* Country.swift */; };
 		4B04F13A22E5F6F6000B09BD /* Int+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B04F13922E5F6F6000B09BD /* Int+Utils.swift */; };
-		4B0B4DA122E348BA0057EB9A /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B4DA022E348BA0057EB9A /* TextConstants.swift */; };
 		4B0E673622E1C50500F67960 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0E673522E1C50500F67960 /* Flight.swift */; };
 		BD2E014A9337106C06FAF315 /* Pods_TopAvia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B688B39D3771A2E2AF3FAA1 /* Pods_TopAvia.framework */; };
 		D4839F5C22F4D06100E6FE6F /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4839F5B22F4D06100E6FE6F /* Date+Utils.swift */; };
@@ -33,7 +32,6 @@
 		4B04F13522E5B5B7000B09BD /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		4B04F13722E5D7A9000B09BD /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		4B04F13922E5F6F6000B09BD /* Int+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Utils.swift"; sourceTree = "<group>"; };
-		4B0B4DA022E348BA0057EB9A /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
 		4B0E673522E1C50500F67960 /* Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		6876441FBDD11A5494DFD4D0 /* Pods-TopAvia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopAvia.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopAvia/Pods-TopAvia.release.xcconfig"; sourceTree = "<group>"; };
 		6B688B39D3771A2E2AF3FAA1 /* Pods_TopAvia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopAvia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				D4ABFC0222D49B9E0069C7AA /* Main.storyboard */,
-				4B0B4DA022E348BA0057EB9A /* TextConstants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -297,7 +294,6 @@
 				D4839F5C22F4D06100E6FE6F /* Date+Utils.swift in Sources */,
 				D4F4A9E222E7790100D406FA /* URLConvertible.swift in Sources */,
 				D4839F5E22F4D34100E6FE6F /* Array+Utils.swift in Sources */,
-				4B0B4DA122E348BA0057EB9A /* TextConstants.swift in Sources */,
 				D4F4A9E622E7A3E000D406FA /* FlightMap.swift in Sources */,
 				D4F4A9E422E7919D00D406FA /* JSONResponseDecoder.swift in Sources */,
 				D4F4A9DA22E73BD200D406FA /* FetchService.swift in Sources */,

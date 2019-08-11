@@ -10,7 +10,8 @@ import Foundation
 
 class CityA: NSObject {
     var city: City
-    
+    var countriesB = [CountryB]()
+
     override var description: String {
         return city.name
     }
@@ -25,7 +26,8 @@ class CityA: NSObject {
 class CountryB: NSObject {
     var cityA: CityA
     var country: Country
-    
+    var citiesB = [CityB]()
+
     override var description: String {
         return "From \(cityA.description) to \(country.name)"
     }
@@ -41,6 +43,7 @@ class CountryB: NSObject {
 class CityB: NSObject {
     var countryB: CountryB
     var city: City
+    var datesAB = [DateAB]()
 
     override var description: String {
         return "\(countryB.description) to \(city.name)"
@@ -57,7 +60,8 @@ class CityB: NSObject {
 class DateAB: NSObject {
     var cityB: CityB
     var date: Date
-    
+    var datesBA = [DateBA]()
+
     override var description: String {
         return "\(cityB.description) on \(date.toString())"
     }
